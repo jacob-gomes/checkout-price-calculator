@@ -9,13 +9,13 @@
 ## Running the code on Windows(recomended):
 
 #### Open command prompt navigate to checkout-price-calculator
-#### > build_project.bat
+#### > mvn clean install
 
 #### Run the integration test (provided in the pdf)
-#### > run_integration_test.bat
+#### > mvn integration-test
 
 #### Run the rest server (enhancement to the task)
-#### > run_server.bat
+#### > java -jar target/checkout-price-calculator-0.0.1-SNAPSHOT.jar
 
 # Task side notes
 ## Enhancement can be done:
