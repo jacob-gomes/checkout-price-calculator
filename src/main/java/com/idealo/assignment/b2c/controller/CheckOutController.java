@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ import com.idealo.assignment.b2c.checkout.service.CheckOutService;
 import com.idealo.assignment.b2c.exception.PricingRuleInconsistencyException;
 import com.idealo.assignment.b2c.model.PricingRule;
 
+
+@Component
 @RestController("/checkout")
 public class CheckOutController {
 	
@@ -27,8 +30,8 @@ public class CheckOutController {
 		this.checkOutService = checkOutService;
 	}
 	
-	@PostMapping("/cart")
-	public ResponseEntity<?> addNewGoodToTheCart(@PathVariable String good) throws PricingRuleInconsistencyException{
+	@PostMapping("/cart/{good}")
+	public ResponseEntity<?> addNewGoodToTheCart(@PathVariable("good") String good) throws PricingRuleInconsistencyException{
 		checkOutService.scan(good);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
