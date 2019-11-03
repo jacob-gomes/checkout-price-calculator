@@ -19,7 +19,7 @@
 
 # Task side notes
 ## Enhancement can be done:
-#### Can be made restful and provision for refreshing cart (already done)
+#### Can be made restful and provision for refreshing cart (added it as demontration)
 #### Database can be introduced for holding the rules
 
 ## Assumption:
