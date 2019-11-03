@@ -23,8 +23,7 @@
 #### Database can be introduced for holding the rules
 
 ## Assumption:
-#### There is only one offer associated to a good
+#### The goods are associated with a basic attribute of good name and good cost per unit
 
-
-## Changes made:
+## Changes made to the original:
 #### Made changes in the test cases to adapt it to spring runned and decoupled coding
